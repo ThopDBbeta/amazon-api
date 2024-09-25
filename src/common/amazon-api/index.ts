@@ -23,7 +23,7 @@ export const amazonApi = async <T>(props: AmazonApiProps) => {
   const response = await fetch(url.toString(), {
     method,
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json","Access-Control-Allow-Origin": "*"
       ...headers,
     },
     body: body ? JSON.stringify(body) : undefined,
